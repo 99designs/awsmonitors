@@ -27,6 +27,8 @@ def main():
         push_metric('StatusCheckFailed', 1)
         sys.exit()
 
+    print 'using instance_id %s' % instance_id
+
     data = []
     old_data = {}
     new_data = {}
@@ -43,6 +45,10 @@ def main():
                 continue
 
             parts = re.split('\s+', r.strip())
+
+            if parts[0].startswith("MAIN."):
+                parts[0] = parts[0][5:]
+
 
             if parts[0] in settings.INCLUDE_METRICS:
                 if parts[0] in settings.CALCULATE_CHANGE:
@@ -79,7 +85,7 @@ def main():
         f.write('\n'.join([k+','+str(v) for k, v in new_data.items()]))
 
     for d in data:
-        #print d
+        print d
         push_metric(*d)
 
 

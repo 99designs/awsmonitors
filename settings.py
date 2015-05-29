@@ -1,9 +1,6 @@
-DEBUG = True
+import os
 
-# Check these URLs
-CHECK_URLS = (
-    'http://99designs.com',
-)
+DEBUG = os.getenv('DEBUG', '0') == '1'
 
 # Cache stats in this file for nginx in between runs in order
 # to calculate change
@@ -113,7 +110,7 @@ INCLUDE_METRICS = (
     #"esi_errors",             # ESI parse errors (unlock)
     "accept_fail",            # Accept failures
     "client_drop_late",       # Connection dropped late
-    #"uptime",                 # Client uptime
+    "uptime",                 # Client uptime
     "backend_retry",          # Backend conn. retry
     #"dir_dns_lookups",        # DNS director lookups
     #"dir_dns_failed",         # DNS director failed lookups
