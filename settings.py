@@ -1,21 +1,8 @@
-DEBUG = False
+DEBUG = True
 
 # Check these URLs
 CHECK_URLS = (
-    'http://www.chicagonow.com',
-    'http://www.vivelohoy.com',
-    'http://themash.com',
-    'http://www.robertfeder.com',
-    'http://blogs.chicagoshopping.com',
-    'http://www.chicagoshopping.com',
-    'http://members.chicagotribune.com/learn-more/',
-    'http://community.chicagotribune.com',
-    'http://cars.chicagotribune.com/fuel-efficient/',
-    'http://crime.chicagotribune.com/',
-    'http://homicides.redeyechicago.com',
-    'http://schools.chicagotribune.com',
-    'http://cta-api-lb.tribapps.com/bustime/home.jsp',
-    'http://cbn.tribapps.com/stories',
+    'http://99designs.com',
 )
 
 # Cache stats in this file for nginx in between runs in order
