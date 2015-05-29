@@ -1,0 +1,1 @@
+*/5 * * * * ubuntu /usr/bin/python /home/ubuntu/awsmonitors/varnish-aws-logger.py > /dev/null
